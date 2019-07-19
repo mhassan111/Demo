@@ -8,8 +8,8 @@ import android.media.projection.MediaProjection
 import android.media.projection.MediaProjectionManager
 import android.os.Build
 import android.os.Bundle
+import android.widget.Toast
 import com.player.demo.R
-import com.player.demo.services.ScreenCaptureService
 import com.player.demo.util.Util
 
 
@@ -25,6 +25,7 @@ class ScreenRecordRequestActivity : Activity() {
         mProjectionManager = getSystemService(Context.MEDIA_PROJECTION_SERVICE) as MediaProjectionManager
         if (mMediaProjection == null)
             startActivityForResult(mProjectionManager!!.createScreenCaptureIntent(), REQUEST_CODE)
+        Toast.makeText(applicationContext, "accessibility branch added", Toast.LENGTH_LONG).show()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
