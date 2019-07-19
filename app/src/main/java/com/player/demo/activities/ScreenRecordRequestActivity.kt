@@ -26,6 +26,7 @@ class ScreenRecordRequestActivity : Activity() {
         if (mMediaProjection == null)
             startActivityForResult(mProjectionManager!!.createScreenCaptureIntent(), REQUEST_CODE)
         Toast.makeText(applicationContext, "accessibility branch added", Toast.LENGTH_LONG).show()
+        Toast.makeText(applicationContext, "accessibility branch added", Toast.LENGTH_LONG).show()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
